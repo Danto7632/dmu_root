@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus Life - 동양미래대학교</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
     <style>
         * {
             margin: 0;
@@ -13,7 +14,7 @@
 
         body {
             font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -46,13 +47,15 @@
         }
 
         .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 25px;
             padding: 20px;
         }
 
         .service-card {
+            flex: 0 1 280px;
             background: white;
             border-radius: 20px;
             padding: 35px 25px;
@@ -80,23 +83,28 @@
         }
 
         .service-card.dormitory {
-            --card-color: #4CAF50;
-            --card-color-light: #81C784;
+            --card-color: #E53935;
+            --card-color-light: #EF5350;
         }
 
         .service-card.attendance {
-            --card-color: #2196F3;
-            --card-color-light: #64B5F6;
+            --card-color: #FDD835;
+            --card-color-light: #FFEE58;
         }
 
         .service-card.booth {
-            --card-color: #FF9800;
-            --card-color-light: #FFB74D;
+            --card-color: #43A047;
+            --card-color-light: #66BB6A;
         }
 
         .service-card.analysis {
-            --card-color: #9C27B0;
-            --card-color-light: #BA68C8;
+            --card-color: #303F9F;
+            --card-color-light: #5C6BC0;
+        }
+
+        .service-card.assignment {
+            --card-color: #8E24AA;
+            --card-color-light: #AB47BC;
         }
 
         .service-icon {
@@ -172,6 +180,12 @@
                 <div class="service-icon">📊</div>
                 <h2>역량분석</h2>
                 <p>역량 분석 도구 및 리포트</p>
+            </a>
+
+            <a href="/assignment/" class="service-card assignment">
+                <div class="service-icon">📍</div>
+                <h2>기숙사 거리계산</h2>
+                <p>집에서 학교까지 거리 계산 서비스</p>
             </a>
         </div>
 
